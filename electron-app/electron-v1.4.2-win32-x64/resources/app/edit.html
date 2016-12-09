@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="assets/css/common.css" />
     <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
     <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
-    <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
-    <script>window.$ = window.star = require("assets/js/star.js")</script>
+    <script>window.$ = window.jQuery = require("assets/js/jquery-3.1.1.min.js")</script>
 </head>
 
 <body>
@@ -70,7 +69,16 @@
         </div>
 
     </div>
-
+<script>
+    $(document).ready(function() {
+    $('.star').click(function() {
+        $(this).parent().children('i').removeClass('fa-star');
+        $(this).parent().children('i').addClass('fa-star-o');
+        $(this).removeClass('fa-star-o').addClass('fa-star').prevAll('i').removeClass('fa-star-o').addClass('fa-star');
+        return false;
+    })
+})
+    </script>
 </body>
 
 </html>
