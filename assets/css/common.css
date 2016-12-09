@@ -23,6 +23,7 @@ html {
 }
 
 .list-item {
+    position: absolute;
     list-style-type: none;
     border-bottom: 1px solid #ddd;
     height: 70px;
