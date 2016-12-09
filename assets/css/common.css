@@ -33,7 +33,7 @@ html {
     width: 100%;
     font-size: 14px;
     position: relative;
-    transition: height 0.5s, width 0.5s, font-size 0.5s, left .5s;
+    transition: height 0.5s, width 0.5s, font-size 0.5s, position .5s;
 }
 
 .list-item::last-child {
@@ -42,7 +42,18 @@ html {
 
 .list-item:hover {
     left: -10%;
+    animation-name: move;
+    animation-duration: .5s;
     height: 100px;
     width: 120%;
     font-size: 16px;
+}
+
+@keyframes move {
+    from {
+        left: 0;
+    }
+    to {
+        left: -10%;
+    }
 }
