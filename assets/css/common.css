@@ -9,7 +9,7 @@ a {
 }
 
 a:hover {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .bold {
@@ -25,12 +25,12 @@ a:hover {
 .menu {
     float: right;
     width: 100px;
-    background-color: #1F1F1F;
     color: #fff;
     text-align: center;
 }
 
 .menu-item {
+    background-color: #1F1F1F;
     vertical-align: middle;
     height: calc(100% / 3);
     padding: 100% 0;
