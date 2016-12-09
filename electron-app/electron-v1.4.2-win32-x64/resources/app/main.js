@@ -11,11 +11,10 @@ function createWindow() {
         height: 700,
         frame: false,
         //일렉트론 최초작동과 html 로드까지는 약간의 딜레이가 있다. backgroundColor는 최대한 네이티브 앱처럼 보이게 할 것이다
-        backgroundImage: "url('./assets/mainpage.png')",
-        //backgroundColor: '#ffffff',
+        backgroundColor: '#ffffff',
         //동시에 풀스크린을 명시적으로 false하므로써 MacOS에서의 전체화면 보기를 가린다
         fullscreen: false,
-        icon: 'D:/NevernotE-test/NavernotEsimple.ico',
+        icon: 'C:/Users/My/NevernotE/electron-app/electron-v1.4.2-win32-x64/resources/app/NavernotEsimple.ico',
     })
 
 
