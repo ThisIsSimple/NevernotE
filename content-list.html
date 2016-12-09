@@ -35,20 +35,31 @@
             padding: 25px 0;
             border-bottom: 1px solid #ddd;
         }
+        
+        .shutup i {
+            color: #777777;
+        }
+        
+        .shutup i:hover {
+            color: #ff6b6b;
+        }
     </style>
 
 </head>
 
 <body>
     <div style="width: 1120px; height: 700px">
+
         <div id="board">
+
+            <div class="upper_bar" style="width: 1120px; height: 20px; margin-top: 5px; margin-left: -545px">
+                <div class="shutup"><a id="close" href="javascript:window.close()"><i class="fa fa-circle fa-1x" aria-hidden="true"></i></a></div>
+            </div>
 
             <h1 id="content_title" class="display-3">To-Do List</h1>
 
-            <div class="row" id="status">
-                <div class="col-md-2">
-
-                </div>
+            <div class="row">
+                <div class="col-md-2"></div>
                 <div class="col-md-8">
                     <div class="complete_list">
 
@@ -57,33 +68,32 @@
                         <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
                         <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
                         <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                    </div>
-                    <div class="ongoing_list">
 
-                        <div class="subcopy"><i class="fa fa-play-circle" aria-hidden="true" style="margin-right: 4px"></i>Ongoing To-Do</div>
+                        <div class="ongoing_list">
 
-                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                            <div class="subcopy"><i class="fa fa-play-circle" aria-hidden="true" style="margin-right: 4px"></i>Ongoing To-Do</div>
+
+                            <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                            <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                            <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div class="menu">
+                <a href="edit.html">
+                    <div class="menu-item active"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+                </a>
+                <a href="edit.html">
+                    <div class="menu-item"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+                </a>
+                <a href="edit.html">
+                    <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+                </a>
+            </div>
 
-        <div class="menu">
-            <a href="edit.html">
-                <div class="menu-item active"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
-            </a>
-            <a href="edit.html">
-                <div class="menu-item"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
-            </a>
-            <a href="edit.html">
-                <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
-            </a>
         </div>
-
-    </div>
 </body>
 
 </html>
