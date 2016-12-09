@@ -24,16 +24,17 @@ html {
 
 .item-wrapper {
     height: 70px;
+    border-bottom: 1px solid #ddd;
 }
 
 .list-item {
-    border-bottom: 1px solid #ddd;
     height: 50px;
     width: 100%;
     font-size: 14px;
-    transition: height 0.5s, width 0.5s, font-size 0.5s;
-    -webkit-transition: height 0.5s, width 0.5s, font-size 0.5s;
-    -moz-transition: height 0.5s, width 0.5s, font-size 0.5s;
+    position: relative;
+    transition: height 0.5s, width 0.5s, font-size 0.5s, left .5s;
+    -webkit-transition: height 0.5s, width 0.5s, font-size 0.5s, left .5s;
+    -moz-transition: height 0.5s, width 0.5s, font-size 0.5s, left .5s;
 }
 
 .list-item::last-child {
@@ -41,6 +42,7 @@ html {
 }
 
 .list-item:hover {
+    left: -50px;
     height: 100px;
     width: 120%;
     font-size: 16px;
