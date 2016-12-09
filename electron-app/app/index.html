@@ -1,33 +1,92 @@
-<!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>NevernotE</title>
-        <style>
-            body {
-                background-color: #e0e0e0;
-            }
-            div {
-                margin-top: 43vh;
-            }
-            div h1 {
-                color: #ff7f7f;
-                font-size: 50px;
-                font-family: '맑은 고딕', sans-serif;
-                text-align: center;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="headCopy"><h1>참고용</h1></div>
-        
-        <script>window.$ = window.jQuery = require('./jquery-3.1.1.min.js');</script>
-        <script>
-            $(document).ready(function(){
-                $('#headCopy').click(function(){
-                  $('#headCopy').hide();      
-                })
-            })
-        </script>
-    </body>
+
+<head>
+    <title>NevernotE</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
+    <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
+    <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
+
+<style>
+        .shutup {
+            width: 1120px;
+            height: 20px;
+            margin-top: 5px;
+            margin-left: -545px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        var $d = new Date(year, month, day);
+        $('#today').html($d);
+    </script>
+
+    <div style="width: 1120px; height: 700px;">
+
+        <div id="board">
+                      
+            <div class="upper_bar">
+                <div class="shutup"></div>
+            </div>
+                      
+            <h1 id="today" class="display-3">December 25, 2016</h1>
+
+            <div class="status">
+                <p>Today's To-Do :
+                    <span class="bold">
+                        <select>
+                            <option value="mod-weekday">평일</option>
+                            <option value="mod-stay">잔류</option>
+                            <option value="mod-vacation">방학</option>
+                            <option value="mod-weekend">주말/휴일</option>
+                        </select>
+                    </span>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 arrow">
+                    <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-8">
+                    <div class="list">
+                        <div class="item-wrapper">
+                            <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
+                        </div>
+                        <div class="item-wrapper">
+                            <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 arrow">
+                    <i class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-item active"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+            </a>
+            <a href="content-list.html">
+                <div class="menu-item"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+            </a>
+            <a href="edit.html">
+                <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
 </html>

@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <title>NevernotE</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
+    <script src="assets/js/jquery.js"></script>
+</head>
+
+<body>
+    <script>
+        var $d = new Date(year, month, day);
+        $('#today').html($d);
+    </script>
+
+    <div style="width: 1120px; height: 700px;">
+
+        <div id="board">
+            <h1 id="today" class="display-3">December 25, 2016</h1>
+
+            <div class="status">
+                <p>Today's To-Do :
+                    <span class="bold">
+                        <select>
+                            <option value="mod-weekday">평일</option>
+                            <option value="mod-stay">잔류</option>
+                            <option value="mod-vacation">방학</option>
+                            <option value="mod-weekend">주말/휴일</option>
+                        </select>
+                    </span>
+                </p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <a href="index.html">
+                <div class="menu-item active"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+            </a>
+            <a href="content-list.html">
+                <div class="menu-item"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+            </a>
+            <a href="edit.html">
+                <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

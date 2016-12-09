@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <title>NevernotE</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/common.css" />
+    <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
+    <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
+    <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
+
+    <style>
+        #content_title {
+            text-align: center;
+            font-weight: 300;
+        }
+        
+        .subcopy {
+            font-size: 15px;
+            font-weight: 700;
+            margin-top: 30px;
+            margin-left: -550px;
+            color: rgba( 0, 0, 0, 0.6);
+        }
+        
+        .item-wrapper {
+            height: 70px;
+            padding: 25px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .shutup {
+            width: 1120px;
+            height: 20px;
+            margin-top: 5px;
+            margin-left: -545px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="width: 1120px; height: 700px">
+
+        <div id="board">
+
+            <div class="upper_bar">
+                <div class="shutup"></div>
+            </div>
+
+            <h1 id="content_title" class="display-3">To-Do List</h1>
+
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="complete_list">
+
+                        <div class="subcopy"><i class="fa fa-check-circle" aria-hidden="true" style="margin-right: 4px"></i>Complete To-Do</div>
+
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+
+                        <div class="ongoing_list">
+
+                            <div class="subcopy"><i class="fa fa-play-circle" aria-hidden="true" style="margin-right: 4px"></i>Ongoing To-Do</div>
+
+                            <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                            <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                            <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+
+            <div class="menu">
+                <a href="index.html">
+                    <div class="menu-item"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+                </a>
+                <a href="content-list.html">
+                    <div class="menu-item active"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+                </a>
+                <a href="edit.html">
+                    <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+                </a>
+            </div>
+
+</body>
+
+</html>
