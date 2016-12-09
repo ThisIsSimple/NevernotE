@@ -1,5 +1,15 @@
 {
-  "name"    : "NevernotE",
-  "version" : "0.0.1",
-  "main"    : "main.js"
+    "name"    : "NevernotE",
+    "version" : "0.0.1",
+    "main"    : "main.js"
+    "description": "NevernotE. The most simple, The most powerful. NevernotE is next-gen To-Do writer that destroy dirty Windows Sticker Note.",
+    "license": "MIT",
+    "author": {
+        "name": "BJ JO-AH, Junhwan LEE"
+    }
+    "files": [
+        "index.html",
+        "main.js",
+        "jquery-3.1.1.min"
+    ],
 }
