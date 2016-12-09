@@ -29,10 +29,13 @@ html {
 }
 
 .list-item {
+    position: relative;
+    left: 0;
+    animation-name: moveleft;
+    animation-duration: .5s;
     height: 50px;
     width: 100%;
     font-size: 14px;
-    position: relative;
     transition: height 0.5s, width 0.5s, font-size 0.5s, position .5s;
 }
 
@@ -42,18 +45,27 @@ html {
 
 .list-item:hover {
     left: -10%;
-    animation-name: move;
+    animation-name: moveleft;
     animation-duration: .5s;
     height: 100px;
     width: 120%;
     font-size: 16px;
 }
 
-@keyframes move {
+@keyframes moveleft {
     from {
         left: 0;
     }
     to {
         left: -10%;
+    }
+}
+
+@keyframes moveright {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 0;
     }
 }
