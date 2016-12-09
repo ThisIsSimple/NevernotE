@@ -3,14 +3,14 @@
 <head>
     <title>NevernotE</title>
 
-    <link rel="stylesheet" href="assets/css/edit.css" />
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/common.css" />
+    <link rel="stylesheet" href="assets/css/edit.css" />
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
-    <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
-    <script>window.$ = window.jQuery = require("assets/js/jquery-3.1.1.min.js")</script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/star.js"></script>
 </head>
 
 <body>
@@ -22,9 +22,12 @@
     <div style="width: 1120px; height: 700px;">
 
         <div id="board">
-            <div class="container">
-                <h1 id="today" class="display-3">Add To-Do</h1>
+
+            <div class="upper_bar">
+                <div class="shutup"><a id="close" href="javascript:window.close()"><i class="fa fa-circle fa-1x" aria-hidden="true"></i></a></div>
             </div>
+
+            <h1 id="today" class="display-3 center-align">Add To-Do</h1>
 
             <div class="row">
                 <div class="col-md-2"></div>
@@ -69,16 +72,7 @@
         </div>
 
     </div>
-<script>
-    $(document).ready(function() {
-    $('.star').click(function() {
-        $(this).parent().children('i').removeClass('fa-star');
-        $(this).parent().children('i').addClass('fa-star-o');
-        $(this).removeClass('fa-star-o').addClass('fa-star').prevAll('i').removeClass('fa-star-o').addClass('fa-star');
-        return false;
-    })
-})
-    </script>
+
 </body>
 
 </html>
