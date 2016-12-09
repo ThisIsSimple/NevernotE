@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/common.css" />
     <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
-    <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
-    <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
+    <script>
+        window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")
+    </script>
+    <script>
+        window.$ = window.jQuery = require("assets/js/jquery.js")
+    </script>
 
-<style>
+    <style>
         .shutup {
             width: 1120px;
             height: 20px;
@@ -24,17 +28,17 @@
 <body>
     <script>
         var $d = new Date(year, month, day);
-        $('#today').html($d);
+        alert("hello");
     </script>
 
     <div style="width: 1120px; height: 700px;">
 
         <div id="board">
-                      
+
             <div class="upper_bar">
                 <div class="shutup"></div>
             </div>
-                      
+
             <h1 id="today" class="display-3">December 25, 2016</h1>
 
             <div class="status">
@@ -86,6 +90,13 @@
         </div>
 
     </div>
+
+    <script>
+        var fs = require('fs');
+        var data = fs.readFileSync('dummy.json');
+        var jsonData = JSON.parse(data);
+        document.write(jsonData);
+    </script>
 
 </body>
 

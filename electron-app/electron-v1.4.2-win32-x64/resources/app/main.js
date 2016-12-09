@@ -2,10 +2,10 @@
 const electron = require('electron')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
-//mainWindow혹은 win. 어떤 것이든 새 창을 만들기 위한 변수명으로는 상관 없었다
+    //mainWindow혹은 win. 어떤 것이든 새 창을 만들기 위한 변수명으로는 상관 없었다
 let win
-//그리하여 새 창이, 이곳에서 만들어진다.
-function createWindow(){
+    //그리하여 새 창이, 이곳에서 만들어진다.
+function createWindow() {
     win = new BrowserWindow({
         width: 1120,
         height: 700,
@@ -20,23 +20,22 @@ function createWindow(){
 
     //그리고 html 로드
     win.loadURL(`file://${__dirname}/mainpage.html`)
-    //창이 닫힐 때, win의 값을 제.거.한다
-    win.on('closed', function(){
-        win = null
-    })
-    //win.webContents.openDevTools()
-    
+        //창이 닫힐 때, win의 값을 제.거.한다
+    win.on('closed', function() {
+            win = null
+        })
+        //win.webContents.openDevTools()
 }
 //MacOS 등의 OS에서 프로그램이 독 등에 남아 있을 경우, 재실행을 준비한다
 app.on('ready', createWindow)
 
-app.on('window-all-closed', function(){
+app.on('window-all-closed', function() {
     if (process.platform !== 'darwin') {
         app.quit()
     }
 })
 
-app.on('activate', function(){
+app.on('activate', function() {
     if (win === null) {
         createWindow()
     }
