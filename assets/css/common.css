@@ -21,4 +21,5 @@ html {
 .menu-item {
     vertical-align: middle;
     height: calc(100% / 3);
+    padding: 100% 0;
 }
