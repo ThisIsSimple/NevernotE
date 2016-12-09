@@ -8,6 +8,14 @@ a {
     color: #fff;
 }
 
+a:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.bold {
+    font-weight: bold;
+}
+
 #board {
     float: left;
     width: calc(100% - 100px);
