@@ -1,0 +1,34 @@
+#content_title {
+    text-align: center;
+    font-weight: 300;
+}
+
+.subcopy {
+    font-size: 15px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-left: -550px;
+    color: rgba( 0, 0, 0, 0.6);
+}
+
+.item-wrapper {
+    height: 70px;
+    padding: 25px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.shutup {
+    width: 1120px;
+    height: 20px;
+    margin-top: 5px;
+    margin-left: -545px;
+    position: absolute;
+}
+
+.shutup i {
+    color: #777777;
+}
+
+.shutup i:hover {
+    color: #ff6b6b;
+}
