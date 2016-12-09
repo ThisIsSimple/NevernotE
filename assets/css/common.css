@@ -23,3 +23,7 @@ html {
     height: calc(100% / 3);
     padding: 100% 0;
 }
+
+.menu-item.active {
+    background-color: #111;
+}
