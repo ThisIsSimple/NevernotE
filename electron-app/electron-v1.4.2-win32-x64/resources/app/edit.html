@@ -2,15 +2,38 @@
 
 <head>
     <title>NevernotE</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+     <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/common.css" />
-    <link rel="stylesheet" href="assets/css/edit.css" />
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/star.js"></script>
+    <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
+    <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
+    <link rel="stylesheet" href="assets/css/edit.css" />
+    <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
+    <style>
+        <style>
+    .upper_bar {
+            width: 1120px;
+            height: 20px;
+            position: fixed;
+            margin-top: 10px;
+        }
+          .shutup {
+              width: 18px;
+              height: 18px;
+              margin-left: 10px;
+              margin-top: 10px;
+          }
+        .shutup .down_button {
+            width: 18px;
+            height: 18px;
+            background-color: #777777;
+            border-radius: 15px;
+        }
+        .shutup .down_button:hover {
+           background-color: #ff6b6b;
+        }
+    </style>
 </head>
 
 <body>
@@ -18,13 +41,13 @@
         var $d = new Date(year, month, day);
         $('#today').html($d);
     </script>
-
+   
     <div style="width: 1120px; height: 700px;">
 
         <div id="board">
 
             <div class="upper_bar">
-                <div class="shutup"><a id="close" href="javascript:window.close()"><i class="fa fa-circle fa-1x" aria-hidden="true"></i></a></div>
+                <div class="shutup"><a id="close" href="javascript:window.close()"><div class="down_button"></div></a></div>
             </div>
 
             <h1 id="today" class="display-3 center-align">Add To-Do</h1>
@@ -72,6 +95,16 @@
         </div>
 
     </div>
+<script>
+    $(document).ready(function() {
+    $('.star').click(function() {
+        $(this).parent().children('i').removeClass('fa-star');
+        $(this).parent().children('i').addClass('fa-star-o');
+        $(this).removeClass('fa-star-o').addClass('fa-star').prevAll('i').removeClass('fa-star-o').addClass('fa-star');
+        return false;
+    });
+});
+    </script>
 
 </body>
 

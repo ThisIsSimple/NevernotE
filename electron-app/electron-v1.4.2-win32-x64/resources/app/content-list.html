@@ -2,19 +2,12 @@
 
 <head>
     <title>NevernotE</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/common.css" />
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
-    <script src="assets/js/jquery.js"></script>
-    <!--
+    <meta charset="utf-8">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/common.css" />
     <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
     <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
     <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
-    -->
 
     <style>
         #content_title {
@@ -35,21 +28,25 @@
             padding: 25px 0;
             border-bottom: 1px solid #ddd;
         }
-        
-        .shutup {
+    .upper_bar {
             width: 1120px;
             height: 20px;
-            margin-top: 5px;
-            margin-left: -545px;
-            position: absolute;
+            position: fixed;
         }
-        
-        .shutup i {
-            color: #777777;
+          .shutup {
+              width: 18px;
+              height: 18px;
+              margin-left: 10px;
+              margin-top: 10px;
+          }
+        .shutup .down_button {
+            width: 18px;
+            height: 18px;
+            background-color: #777777;
+            border-radius: 15px;
         }
-        
-        .shutup i:hover {
-            color: #ff6b6b;
+        .shutup .down_button:hover {
+           background-color: #ff6b6b;
         }
     </style>
 
@@ -58,10 +55,10 @@
 <body>
     <div style="width: 1120px; height: 700px">
 
-        <div id="board" style="text-align: center;">
+        <div id="board">
 
             <div class="upper_bar">
-                <div class="shutup"><a id="close" href="javascript:window.close()"><i class="fa fa-circle fa-1x" aria-hidden="true"></i></a></div>
+                <div class="shutup"><a id="close" href="javascript:window.close()"><div class="down_button"></div></a></div>
             </div>
 
             <h1 id="content_title" class="display-3">To-Do List</h1>
@@ -89,19 +86,19 @@
                 </div>
             </div>
         </div>
+            
 
-
-        <div class="menu">
-            <a href="index.html">
-                <div class="menu-item"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
-            </a>
-            <a href="content-list.html">
-                <div class="menu-item active"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
-            </a>
-            <a href="edit.html">
-                <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
-            </a>
-        </div>
+            <div class="menu">
+                <a href="index.html">
+                    <div class="menu-item"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+                </a>
+                <a href="content-list.html">
+                    <div class="menu-item active"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+                </a>
+                <a href="edit.html">
+                    <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+                </a>
+            </div>
 
 </body>
 
