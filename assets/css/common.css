@@ -6,6 +6,7 @@ html {
 
 #board {
     float: left;
+    text-align: center;
 }
 
 .menu {
