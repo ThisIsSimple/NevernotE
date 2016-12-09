@@ -23,10 +23,22 @@
         <div id="board">
             <h1 id="today" class="display-3">December 25, 2016</h1>
 
-            <div class="status"></div>
+            <div class="status">
+                <p>Today's To-Do :
+                    <span class="bold">
+                        <select>
+                            <option value="mod-weekday">평일</option>
+                            <option value="mod-stay">잔류</option>
+                            <option value="mod-vacation">방학</option>
+                            <option value="mod-weekend">주말/휴일</option>
+                        </select>
+                    </span>
+                </p>
+            </div>
 
             <div class="row">
-                <div class="col-md-2">
+                <div class="col-md-2 arrow">
+                    <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
                 </div>
                 <div class="col-md-8">
                     <div class="list">
@@ -41,14 +53,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 arrow">
+                    <i class="fa fa-angle-right fa-5x" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
 
         <div class="menu">
-            <div class="menu-item active"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
-            <div class="menu-item"><a href="content-list.html"><i class="fa fa-align-justify fa-3x" aria-hidden="true"></i></a></div>
+            <div class="menu-item active"><a href="index.html"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></a></div>
+            <div class="menu-item"><a href="content-list.html"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a></div>
             <div class="menu-item"><a href="edit.html"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></a></div>
         </div>
 
