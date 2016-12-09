@@ -13,5 +13,19 @@ html {
 
 .menu-item {
     vertical-align: middle;
-    height: calc(100vh / 3);
+    height: calc(100% / 3);
+}
+
+.list-item {
+    height: 100px;
+    width: 200px;
+    transition: height 0.5s, width 0.5s, font-size 0.5s;
+    -webkit-transition: height 0.5s, width 0.5s, font-size 0.5s;
+    -moz-transition: height 0.5s, width 0.5s, font-size 0.5s;
+}
+
+.list-item:hover {
+    height: 150px;
+    width: 300px;
+    font-size: 16px;
 }
