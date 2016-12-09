@@ -16,10 +16,21 @@ a:hover {
     font-weight: bold;
 }
 
+.center-align {
+    text-align: center;
+}
+
+.left-align {
+    text-align: left;
+}
+
+.right-align {
+    text-align: right;
+}
+
 #board {
     float: left;
     width: calc(100% - 100px);
-    text-align: center;
 }
 
 .menu {
