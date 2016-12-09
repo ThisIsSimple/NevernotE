@@ -31,7 +31,7 @@ html {
 .list-item {
     position: relative;
     left: 0;
-    animation-name: moveleft;
+    animation-name: moveright;
     animation-duration: .5s;
     height: 50px;
     width: 100%;
