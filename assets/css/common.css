@@ -3,3 +3,23 @@
 html {
     font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
 }
+
+#board {
+    float: left;
+    width: calc(100% - 100px);
+    text-align: center;
+}
+
+.menu {
+    float: right;
+    width: 100px;
+    background-color: #1F1F1F;
+    color: #fff;
+    text-align: center;
+}
+
+.menu-item {
+    vertical-align: middle;
+    height: calc(100% / 3);
+    padding: 100% 0;
+}
