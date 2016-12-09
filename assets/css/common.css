@@ -3,3 +3,7 @@
 html {
     font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
 }
+
+.menu-item {
+    height: calc(100vh / 3);
+}
