@@ -6,7 +6,7 @@
 .list-item {
     width: 100%;
     font-size: 14px;
-    transition: width 0.5s, font-size 0.5s;
+    transition: font-size 0.5s;
 }
 
 .list-item::last-child {
@@ -14,24 +14,5 @@
 }
 
 .list-item:hover {
-    width: 120%;
     font-size: 16px;
-}
-
-@keyframes moveleft {
-    from {
-        left: 0;
-    }
-    to {
-        left: -10%;
-    }
-}
-
-@keyframes moveright {
-    from {
-        left: -10%;
-    }
-    to {
-        left: 0;
-    }
 }
