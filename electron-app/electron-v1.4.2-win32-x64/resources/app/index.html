@@ -55,7 +55,7 @@
                     <i class="fa fa-angle-left fa-5x" aria-hidden="true"></i>
                 </div>
                 <div class="col-md-8">
-                    <div class="list">
+                    <div class="list"  id="todoList">
                         <div class="item-wrapper">
                             <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
                         </div>
@@ -86,7 +86,18 @@
         </div>
 
     </div>
+<script>
+    const fs = require('fs')
 
+    var memoList = document.getElementById('todoList')
+
+    fs.readFile('memo.txt', 'utp8', function(err, data){
+        if(err) console.log('Oops! there is something wrong!');
+        else {
+            memoList.innerHTML = '<div class="item-wrapper"><span class="list-item">' + data + '</span></div>'
+        }
+    })
+    </script>
 </body>
 
 </html>
