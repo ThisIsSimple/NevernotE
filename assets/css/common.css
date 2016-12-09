@@ -22,11 +22,13 @@ html {
     height: calc(100% / 3);
 }
 
-.list-item {
-    position: absolute;
-    list-style-type: none;
-    border-bottom: 1px solid #ddd;
+.item-wrapper {
     height: 70px;
+}
+
+.list-item {
+    border-bottom: 1px solid #ddd;
+    height: 50px;
     width: 100%;
     font-size: 14px;
     transition: height 0.5s, width 0.5s, font-size 0.5s;
