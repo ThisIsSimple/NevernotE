@@ -1,0 +1,46 @@
+.item-wrapper {
+    height: 70px;
+    border-bottom: 1px solid #ddd;
+}
+
+.list-item {
+    position: relative;
+    left: 0;
+    animation-name: moveright;
+    animation-duration: .5s;
+    height: 50px;
+    width: 100%;
+    font-size: 14px;
+    transition: height 0.5s, width 0.5s, font-size 0.5s, position .5s;
+}
+
+.list-item::last-child {
+    border: 0;
+}
+
+.list-item:hover {
+    left: -10%;
+    animation-name: moveleft;
+    animation-duration: .5s;
+    height: 100px;
+    width: 120%;
+    font-size: 16px;
+}
+
+@keyframes moveleft {
+    from {
+        left: 0;
+    }
+    to {
+        left: -10%;
+    }
+}
+
+@keyframes moveright {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 0;
+    }
+}
