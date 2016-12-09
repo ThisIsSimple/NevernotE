@@ -15,65 +15,75 @@
     <script>window.$ = window.bootstrap = require("assets/js/bootstrap.min.js")</script>
     <script>window.$ = window.jQuery = require("assets/js/jquery.js")</script>
     -->
-    
+
     <style>
         #content_title {
             text-align: center;
             font-weight: 300;
         }
+        
         .subcopy {
             font-size: 15px;
             font-weight: 700;
             margin-top: 30px;
             margin-left: -550px;
-            color: rgba( 0, 0, 0, 0.6 );
+            color: rgba( 0, 0, 0, 0.6);
         }
+        
         .item-wrapper {
             height: 70px;
             padding: 25px 0;
             border-bottom: 1px solid #ddd;
         }
     </style>
-    
+
 </head>
+
 <body>
     <div style="width: 1120px; height: 700px">
-    <div id="board">
-       
-        <h1 id="content_title" class="display-3">To-Do List</h1>
-        
-        <div class="row" id="status">
-            <div class="col-md-2">
-                
-            </div>
-            <div class="col-md-8">
-                <div class="complete_list">
-                  
-                  <div class="subcopy"><i class="fa fa-check-circle" aria-hidden="true" style="margin-right: 4px"></i>Complete To-Do</div>
-                   
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+        <div id="board">
+
+            <h1 id="content_title" class="display-3">To-Do List</h1>
+
+            <div class="row" id="status">
+                <div class="col-md-2">
+
                 </div>
-                <div class="ongoing_list">
-                  
-                  <div class="subcopy"><i class="fa fa-play-circle" aria-hidden="true" style="margin-right: 4px"></i>Ongoing To-Do</div>
-                   
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                <div class="col-md-8">
+                    <div class="complete_list">
+
+                        <div class="subcopy"><i class="fa fa-check-circle" aria-hidden="true" style="margin-right: 4px"></i>Complete To-Do</div>
+
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                    </div>
+                    <div class="ongoing_list">
+
+                        <div class="subcopy"><i class="fa fa-play-circle" aria-hidden="true" style="margin-right: 4px"></i>Ongoing To-Do</div>
+
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                    </div>
                 </div>
             </div>
+
         </div>
-        
-    </div>
-    
-    <div class="menu">
-            <div class="menu-item"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
-            <div class="menu-item active"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
-            <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+
+        <div class="menu">
+            <a href="edit.html">
+                <div class="menu-item active"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+            </a>
+            <a href="edit.html">
+                <div class="menu-item"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+            </a>
+            <a href="edit.html">
+                <div class="menu-item"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+            </a>
         </div>
-    
+
     </div>
 </body>
+
 </html>
