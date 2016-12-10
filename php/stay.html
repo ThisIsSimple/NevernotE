@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>NevernotE</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/common.css" />
+
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <style>
+        .shutup {
+            width: 1120px;
+            height: 20px;
+            margin-top: 5px;
+            margin-left: -545px;
+            position: absolute;
+        }
+        
+        .shutup i {
+            color: #777777;
+        }
+        
+        .shutup i:hover {
+            color: #ff6b6b;
+        }
+        #buttons button {
+            background-color: #dbdbdb;
+            font-size: 14px;
+        }
+        #buttons button:hover {
+            background-color: #e8e8e8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 1120px; height: 700px;">
+
+<link rel="stylesheet" href="assets/css/edit.css" />
+<script src="assets/js/star.js"></script>
+
+<div id="board">
+
+    <h1 id="today" class="display-3 center-align">Add To-Do</h1>
+
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+        <form name="new" method="post" action="write.php">
+            <div class="status" id="starrate">
+                <p class="left-align">
+                    <span style="float: right">
+                        <i class="fa fa-circle star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o star" aria-hidden="true"></i>
+                    </span>
+                </p>
+            </div>
+
+            <script>
+            
+            </script>
+
+            <script>
+            function countstar() {
+                var count = $('#starrate').find('.fa-star').length;
+            }
+            </script>
+
+                <textarea name="box" rows="8" placeholder="요! 할일이 뭔가?" autofocus></textarea>
+                <input type="hidden" name="importance" value="<?php echo $count; ?>">
+                <div class="right-align" style="margin: 3px 3px 0 0;">
+                    <input type="submit" onclick="countstar()" value="등록" style="color: #818A91; background-color: transparent; border: 0;">
+                </div>
+            </form>
+            <p class="left-align">Timeline for <span style="font-weight: 700">잔류</span></p>
+            <div class="btn-group btn-group-justified" role="group" aria-label="..." id="buttons">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">오전 자습</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">점심 시간</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">오후 자습</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">저녁 시간</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">야자 1타임</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">야자 2타임</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">심야 자율학습</button>
+          </div>
+        </div>
+            
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<div class="menu">
+    <a href="index.php?thisdate=<?php echo $date; ?>">
+        <div class="menu-item"><i class="fa fa-calendar-o fa-3x" aria-hidden="true"></i></div>
+    </a>
+    <a href="content-list.php?thisdate=<?php echo $date; ?>">
+        <div class="menu-item"><i class="fa fa-bars fa-3x" aria-hidden="true"></i></div>
+    </a>
+    <a href="edit.php?thisdate=<?php echo $date; ?>">
+        <div class="menu-item active"><i class="fa fa-pencil fa-3x" aria-hidden="true"></i></div>
+    </a>
+</div>
+
+</div>
+
+</body>
+
+</html>
