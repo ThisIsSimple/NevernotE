@@ -180,15 +180,6 @@ function prevpage($y, $m, $d) {
 
 
             <div class="list">
-                <div class="item-wrapper">
-                    <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
-                </div>
-                <div class="item-wrapper">
-                    <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
-                </div>
-                <div class="item-wrapper">
-                    <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
-                </div>
 <?php
 include "dbconnect.php";
 $sql = 'select * from list where date = "'.$thisdate.'"';
@@ -197,7 +188,7 @@ while($row = $result->fetch_assoc()) {
 ?>
 
                 <div class="item-wrapper">
-                    <span class="list-item">asdfsdafasdfascxvawedvxzcv</span>
+                    <span class="list-item"><?php echo $row['text']; ?></span>
                 </div>
 
 <?php } ?>

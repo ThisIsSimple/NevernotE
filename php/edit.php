@@ -54,22 +54,28 @@ switch($today_m) {
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-        <form name="new" method="post" action="write.php">
+        <form method="post" action="write.php">
+            <input type="hidden" name="date" value="<?php echo $date; ?>">
             <div class="status" id="starrate">
                 <p class="left-align">Today's To-Do :
                     <span class="bold"><?php echo $m.' '.$today_d.', '.$today_y; ?></span>
-                    <span style="float: right">
+                    <span style="float: right;">
+                        <span style="display: inline;">중요도</span>
+                        <select name="importance" class="form-control" style="display: inline; border: 0; width: 60px; height: auto; overflow: hidden;">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <!--
                         <i class="fa fa-circle star" aria-hidden="true"></i>
                         <i class="fa fa-star-o star" aria-hidden="true"></i>
                         <i class="fa fa-star-o star" aria-hidden="true"></i>
                         <i class="fa fa-star-o star" aria-hidden="true"></i>
+                        -->
                     </span>
                 </p>
             </div>
-
-            <script>
-            
-            </script>
 
             <script>
             function countstar() {
@@ -78,10 +84,44 @@ switch($today_m) {
             </script>
 
                 <textarea name="box" rows="8" placeholder="요! 할일이 뭔가?" autofocus></textarea>
-                <input type="hidden" name="importance" value="<?php echo $count; ?>">
-                <div class="right-align" style="margin: 3px 3px 0 0;">
-                    <input type="submit" onclick="countstar()" value="등록" style="color: #818A91; background-color: transparent; border: 0;">
-                </div>
+
+            <?php
+                $w = w($date);
+                if($w==0 || $w==6) {
+            ?>
+            <p class="left-align">Timeline for <span style="font-weight: 700">잔류</span></p>
+                    <input type="hidden" name="type" value="2">
+            <div class="form-group">
+                <select name="time" class="form-control" style="width: 100%; height: auto; overflow: hidden;">
+                    <option value="1">오전 자습</option>
+                    <option value="2">점심 시간</option>
+                    <option value="3">오후 자습</option>
+                    <option value="4">저녁 시간</option>
+                    <option value="5">야자 1타임</option>
+                    <option value="6">야자 2타임</option>
+                    <option value="7">심야 자율학습</option>
+                </select>
+            </div>
+            <?php } else { ?>
+            <p class="left-align">Timeline for <span style="font-weight: 700">평일</span></p>
+                    <input type="hidden" name="type" value="1">
+            <div class="form-group">
+                <select name="time" class="form-control" style="border: 0; width: 100%; height: auto; overflow: hidden;">
+                    <option value="1">오전 수업</option>
+                    <option value="2">점심 시간</option>
+                    <option value="3">오후 수업</option>
+                    <option value="4">저녁 시간</option>
+                    <option value="5">야자 1타임</option>
+                    <option value="6">야자 2타임</option>
+                    <option value="7">심야 자율학습</option>
+                </select>
+            </div>
+            <?php } ?>
+
+            <div class="right-align" style="margin: 3px 3px 0 0;">
+                <input type="submit" value="등록" style="color: #818A91; background-color: transparent; border: 0;">
+            </div>
+
             </form>
         </div>
         <div class="col-md-2"></div>

@@ -26,7 +26,7 @@ $thisdate = $_GET['thisdate'];
                 while($row = $result->fetch_assoc()) {
                     ?>
 
-                    <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                    <div class="item-wrapper"><?php echo $row['text']; ?></div>
 
                 <?php } ?>
 
@@ -41,7 +41,7 @@ $thisdate = $_GET['thisdate'];
                     while($row = $result->fetch_assoc()) {
                         ?>
 
-                        <div class="item-wrapper">Lorem ipsum dolor sit amet.</div>
+                        <div class="item-wrapper"><?php echo $row['text']; ?></div>
 
                     <?php } ?>
                 </div>

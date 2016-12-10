@@ -5,3 +5,29 @@ textarea {
     border: 0;
     padding: 10px;
 }
+
+#buttons button {
+    background-color: #dbdbdb;
+    font-size: 14px;
+}
+
+#buttons button:hover {
+    background-color: #e8e8e8;
+}
+
+option {
+    padding: 5px;
+    display: inline-block;
+    background-color: #DBDBDB;
+    width: calc(100% / 6);
+}
+
+select:first-child {
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+select:last-child {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
