@@ -24,8 +24,8 @@
       <file leaf-file-name="edit.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="-84">
+              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -34,14 +34,15 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="557">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
+                <element signature="e#462#895#0#PHP" expanded="false" />
                 <element signature="n#nextpage#0;n#!!top" expanded="false" />
                 <element signature="n#prevpage#0;n#!!top" expanded="false" />
-                <marker date="1481335408095" expanded="true" signature="4110:4581" ph="..." />
-                <marker date="1481335408095" expanded="true" signature="4583:4630" ph="select * fro... list" />
-                <marker date="1481335408095" expanded="true" signature="4933:4934" ph="..." />
+                <marker date="1481336737414" expanded="true" signature="4191:4662" ph="..." />
+                <marker date="1481336737414" expanded="true" signature="4664:4711" ph="select * fro... list" />
+                <marker date="1481336737414" expanded="true" signature="5014:5015" ph="..." />
               </folding>
             </state>
           </provider>
@@ -50,8 +51,8 @@
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1204">
-              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+            <state relative-caret-position="1070">
+              <caret line="50" column="45" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
               <folding>
                 <element signature="e#708#745#0#HTML" expanded="true" />
               </folding>
@@ -224,15 +225,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1481330582539</updated>
-      <workItem from="1481330583751" duration="4800000" />
+      <workItem from="1481330583751" duration="6401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4800000" />
+    <option name="totallyTimeSpent" value="6401000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1562" extended-state="6" />
+    <frame x="-11" y="-11" width="2582" height="1562" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -266,7 +267,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/index.php</url>
+          <line>30</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -291,17 +300,17 @@
         <state relative-caret-position="280">
           <caret line="10" column="44" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
           <folding>
-            <marker date="1481334589209" expanded="true" signature="598:631" ph="select * fro... list" />
-            <marker date="1481334589209" expanded="true" signature="598:633" ph="select * fro... list" />
-            <marker date="1481334589209" expanded="true" signature="1153:1188" ph="select * fro... list" />
+            <marker date="1481335633583" expanded="true" signature="598:631" ph="select * fro... list" />
+            <marker date="1481335633583" expanded="true" signature="598:633" ph="select * fro... list" />
+            <marker date="1481335633583" expanded="true" signature="1153:1188" ph="select * fro... list" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1204">
-          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+        <state relative-caret-position="1070">
+          <caret line="50" column="45" selection-start-line="50" selection-start-column="45" selection-end-line="50" selection-end-column="45" />
           <folding>
             <element signature="e#708#745#0#HTML" expanded="true" />
           </folding>
@@ -310,22 +319,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="26" column="30" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+        <state relative-caret-position="557">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
+            <element signature="e#462#895#0#PHP" expanded="false" />
             <element signature="n#nextpage#0;n#!!top" expanded="false" />
             <element signature="n#prevpage#0;n#!!top" expanded="false" />
-            <marker date="1481335408095" expanded="true" signature="4110:4581" ph="..." />
-            <marker date="1481335408095" expanded="true" signature="4583:4630" ph="select * fro... list" />
-            <marker date="1481335408095" expanded="true" signature="4933:4934" ph="..." />
+            <marker date="1481336737414" expanded="true" signature="4191:4662" ph="..." />
+            <marker date="1481336737414" expanded="true" signature="4664:4711" ph="select * fro... list" />
+            <marker date="1481336737414" expanded="true" signature="5014:5015" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+        <state relative-caret-position="-84">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
           <folding />
         </state>
       </provider>

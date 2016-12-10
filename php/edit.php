@@ -27,6 +27,21 @@ $today_d = checklen($today_d);
 
 $date = $today_y.$today_m.$today_d;
 
+switch($today_m) {
+    case 1: $m = 'January'; break;
+    case 2: $m = 'Feburary'; break;
+    case 3: $m = 'March'; break;
+    case 4: $m = 'April'; break;
+    case 5: $m = 'May'; break;
+    case 6: $m = 'June'; break;
+    case 7: $m = 'July'; break;
+    case 8: $m = 'August'; break;
+    case 9: $m = 'September'; break;
+    case 10: $m = 'October'; break;
+    case 11: $m = 'November'; break;
+    case 12: $m = 'December'; break;
+}
+
 ?>
 
 <link rel="stylesheet" href="assets/css/edit.css" />
@@ -42,14 +57,7 @@ $date = $today_y.$today_m.$today_d;
         <form name="new" method="post" action="write.php">
             <div class="status" id="starrate">
                 <p class="left-align">Today's To-Do :
-                    <span class="bold">
-                        <select name="type">
-                            <option value="weekday">평일</option>
-                            <option value="weekend">주말/휴일</option>
-                            <option value="stay">잔류</option>
-                            <option value="vacation">방학</option>
-                        </select>
-                    </span>
+                    <span class="bold"><?php echo $m.' '.$today_d.', '.$today_y; ?></span>
                     <span style="float: right">
                         <i class="fa fa-circle star" aria-hidden="true"></i>
                         <i class="fa fa-star-o star" aria-hidden="true"></i>

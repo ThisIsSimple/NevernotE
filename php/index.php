@@ -26,6 +26,8 @@ if(!$today_d) {
 $today_m = checklen($today_m);
 $today_d = checklen($today_d);
 
+$thisdate = $today_y.$today_m.$today_d;
+
 switch($today_m) {
     case 1: $m = 'January'; break;
     case 2: $m = 'Feburary'; break;
@@ -147,7 +149,6 @@ function prevpage($y, $m, $d) {
     return $prevdate;
 }
 
-
 ?>
 
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -164,13 +165,16 @@ function prevpage($y, $m, $d) {
             <div class="status" style="text-align: left;">
                 <p>Today's To-Do :
                     <span class="bold">
-                <select>
-                    <option value="weekday">평일</option>
-                    <option value="stay">잔류</option>
-                    <option value="vacation">방학</option>
-                    <option value="weekend">주말/휴일</option>
-                </select>
-            </span>
+                        <?php
+                        $w = w($thisdate);
+                        if($w==0 || $w==6) {
+                            echo '주말/잔류';
+                        }
+                        else {
+                            echo '평일';
+                        }
+                        ?>
+                    </span>
                 </p>
             </div>
 
