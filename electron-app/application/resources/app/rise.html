@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <title>NevernotE</title>
+        <meta charset="utf-8">
+        <style>
+            @keyframes fadein {
+                from {
+                    opacity: 0;
+                }
+                to {opacity: 1;}
+            }
+            body {
+                overflow: hidden;
+            }
+            .indicator {
+                animation-name: fadein;
+                animation-duration: 1.2s;
+                animation-fill-mode: forwards;
+                width: 1120px;
+                height: 700px;
+                margin-left: -10px;
+                margin-top: -10px;
+            }
+            .content {
+                float: left;
+                overflow: hidden;
+                width: 1120px;
+                height: 710px;
+                margin-top: -8px;
+                margin-left: -8px;
+            }
+            #foo {
+                overflow: hidden;
+            }
+            .upper_bar {
+            width: 1120px;
+            height: 20px;
+            position: fixed;
+        }
+          .shutup {
+              width: 18px;
+              height: 18px;
+              margin-left: 10px;
+              margin-top: 7px;
+          }
+            @keyframes stop_button_check {
+                to {
+                    background-color: #ff6b6b;
+                }
+            }
+        .shutup .down_button {
+            width: 18px;
+            height: 18px;
+            background-color: #777777;
+            border-radius: 15px;
+        }
+        .shutup .down_button:hover {
+           animation-name: stop_button_check;
+            animation-duration: 0.2s;
+            animation-fill-mode: forwards;
+        }
+        </style>
+    </head>
+    
+    <body>
+       <div class="indicator"></div>
+       
+       <div class="upper_bar">
+                <div class="shutup"><a id="close" href="javascript:window.close()"><div class="down_button"></div></a></div>
+            </div>
+            
+       <div class="content">
+           <webview id="foo" src="http://45.76.96.33/index.php" style="display:inline-flex; width:1120px; height:700px"></webview></div>
+        <script>
+          onload = () => {
+            const webview = document.getElementById('foo')
+            const indicator = document.querySelector('.indicator')
+
+            const loadstart = () => {
+              indicator.style.backgroundImage = "url('./assets/mainpage.png')"
+              indicator.style.backgroundSize = 'cover'
+              indicator.style.backgroundPosition = 'center'
+            }
+
+            const loadstop = () => {
+              indicator.style.display = 'none'
+            }
+
+            webview.addEventListener('did-start-loading', loadstart)
+            webview.addEventListener('did-stop-loading', loadstop)
+          }
+        </script>
+    </body>
+</html>

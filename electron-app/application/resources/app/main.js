@@ -19,7 +19,7 @@ function createWindow() {
 
 
     //그리고 html 로드
-    win.loadURL(`file://${__dirname}/index.html`)
+    win.loadURL(`file://${__dirname}/rise.html`)
         //창이 닫힐 때, win의 값을 제.거.한다
     win.on('closed', function() {
             win = null
