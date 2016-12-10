@@ -3,10 +3,10 @@
 <head>
     <title>NevernotE</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/common.css" />
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/df09efc7f1.js"></script>
     <script src="assets/js/jquery.js"></script>
     <style>
@@ -31,3 +31,17 @@
 <body>
 
     <div style="width: 1120px; height: 700px;">
+
+    <?php
+    function checklen($str) {
+        if(strlen($str)<2) {
+            return '0'.$str;
+        }
+        else if(strlen($str)==2) {
+            return $str;
+        }
+        else {
+            substr($str, 0, 2);
+        }
+    }
+    ?>

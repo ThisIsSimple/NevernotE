@@ -22,3 +22,7 @@
 .list-item:hover {
     font-size: 18px;
 }
+
+a:hover {
+    text-decoration: none;
+}
