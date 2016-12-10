@@ -49,6 +49,8 @@ switch($today_m) {
 
 <div id="board">
 
+    <div style="height: 30px"></div>
+
     <h1 id="today" class="display-3 center-align">Add To-Do</h1>
 
     <div class="row">

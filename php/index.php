@@ -149,11 +149,25 @@ function prevpage($y, $m, $d) {
     return $prevdate;
 }
 
+
+//시간 관련 서비스
+$nowt = date("H");
+if($nowt>=8 && $nowt<13) $now = 1; //아침
+else if($nowt>=13 && $nowt<14) $now = 2; //점심
+else if($nowt>=14 && $nowt<18) $now = 3; //오후
+else if($nowt>=18 && $nowt<20) $now = 4; //저녁
+else if($nowt>=20 && $nowt<22) $now = 5; //야자1
+else if($nowt>=22 && $nowt<24) $now = 6; //야자2
+else $now = 7; //심자
+
 ?>
 
 <link rel="stylesheet" href="assets/css/main.css" />
+<script src="assets/js/main.js"></script>
 
 <div id="board" style="text-align: center">
+
+    <div style="height: 30px"></div>
 
     <a href="index.php" style="color: #373A3C;"><h1 id="today" class="display-3"><?php echo $m; ?> <?php echo $today_d; ?>, <?php echo $today_y; ?></h1></a>
 
@@ -179,16 +193,115 @@ function prevpage($y, $m, $d) {
             </div>
 
 
-            <div class="list">
+            <div class="list" style="overflow-y: auto; height: 75%;">
+
+                <?php
+                include "dbconnect.php";
+                $sql = 'select * from list where date = "'.$thisdate.'" and done="0" and time="'.$now.'" order by id asc';
+                $result = $conn->query($sql);
+                while($row=$result->fetch_assoc()) {
+                    if($row['type']==1) {
+                        switch($row['time']) {
+                            case 1:
+                                $strtime='오전 수업'; break;
+                            case 2:
+                                $strtime='점심 시간'; break;
+                            case 3:
+                                $strtime='오후 수업'; break;
+                            case 4:
+                                $strtime='저녁 시간'; break;
+                            case 5:
+                                $strtime='야자 1타임'; break;
+                            case 6:
+                                $strtime='야자 2타임'; break;
+                            case 7:
+                                $strtime='심야 자율학습'; break;
+                        }
+                    }
+                    else if($row['type']==2) {
+                        switch($row['time']) {
+                            case 1:
+                                $strtime='오전 자습'; break;
+                            case 2:
+                                $strtime='점심 시간'; break;
+                            case 3:
+                                $strtime='오후 자습'; break;
+                            case 4:
+                                $strtime='저녁 시간'; break;
+                            case 5:
+                                $strtime='야자 1타임'; break;
+                            case 6:
+                                $strtime='야자 2타임'; break;
+                            case 7:
+                                $strtime='심야 자율학습'; break;
+                        }
+                    }
+                ?>
+                    <div class="item-wrapper" style="border-bottom: 1px solid #666;">
+                        <span class="list-item"><span style="float: left; margin-left: 20px; color: #ff3d7f"><b><?php echo $strtime; ?></b></span><?php echo $row['text']; ?></span>
+                        <div class="list-button" style="float: right; width: 60px; height: 100%;">
+                            <div class="inner">
+                                <a href="done.php?date=<?php echo $row['date'];?>&id=<?php echo $row['id']; ?>" style="color: #818A91; margin-right: 10px;"><i class="fa fa-check fa-1x" aria-hidden="true"></i></a>
+                                <a href="delete.php?date=<?php echo $row['date'];?>&id=<?php echo $row['id']; ?>" style="color: #818A91; margin-right: 15px;"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+
+
+
 <?php
 include "dbconnect.php";
-$sql = 'select * from list where date = "'.$thisdate.'"';
+$sql = 'select * from list where date = "'.$thisdate.'" and done="0" order by time asc';
 $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
+
+    if($row['type']==1) {
+        switch($row['time']) {
+            case 1:
+                $strtime='오전 수업'; break;
+            case 2:
+                $strtime='점심 시간'; break;
+            case 3:
+                $strtime='오후 수업'; break;
+            case 4:
+                $strtime='저녁 시간'; break;
+            case 5:
+                $strtime='야자 1타임'; break;
+            case 6:
+                $strtime='야자 2타임'; break;
+            case 7:
+                $strtime='심야 자율학습'; break;
+        }
+    }
+    else if($row['type']==2) {
+        switch($row['time']) {
+            case 1:
+                $strtime='오전 자습'; break;
+            case 2:
+                $strtime='점심 시간'; break;
+            case 3:
+                $strtime='오후 자습'; break;
+            case 4:
+                $strtime='저녁 시간'; break;
+            case 5:
+                $strtime='야자 1타임'; break;
+            case 6:
+                $strtime='야자 2타임'; break;
+            case 7:
+                $strtime='심야 자율학습'; break;
+        }
+    }
 ?>
 
                 <div class="item-wrapper">
-                    <span class="list-item"><?php echo $row['text']; ?></span>
+                    <span class="list-item"><span style="float: left; margin-left: 20px;"><b><?php echo $strtime; ?></b></span><?php echo $row['text']; ?></span>
+                    <div class="list-button" style="float: right; width: 60px; height: 100%;">
+                        <div class="inner">
+                            <a href="done.php?date=<?php echo $row['date'];?>&id=<?php echo $row['id']; ?>" style="color: #818A91; margin-right: 10px;"><i class="fa fa-check fa-1x" aria-hidden="true"></i></a>
+                            <a href="delete.php?date=<?php echo $row['date'];?>&id=<?php echo $row['id']; ?>" style="color: #818A91; margin-right: 15px;"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
                 </div>
 
 <?php } ?>

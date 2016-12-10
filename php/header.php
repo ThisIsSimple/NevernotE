@@ -30,8 +30,6 @@
 
 <body>
 
-    <div style="width: 1120px; height: 700px;">
-
     <?php
     //2글자 미만의 날짜를 2글자로 만들어줌
     function checklen($str) {

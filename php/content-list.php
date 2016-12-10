@@ -10,14 +10,17 @@ $thisdate = $_GET['thisdate'];
 
 <div id="board" style="text-align: center;">
 
+    <div style="height: 30px"></div>
+
     <h1 id="content_title" class="display-3">To-Do List</h1>
 
     <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-8" style="overflow-y: auto; height: 80%;">
             <div class="complete_list">
 
-                <div class="subcopy"><i class="fa fa-check-circle" aria-hidden="true" style="margin-right: 4px"></i>Complete To-Do</div>
+                <div class="subcopy" style="position: relative; left: 3px;"><span style=""><i class="fa fa-check-circle" aria-hidden="true" style="margin-right: 4px"></i>Complete To-Do</span>
+                    <span style="position: absolute; right: 5px;"><a href="deleteall.php" style="color: rgba( 0, 0, 0, 0.6);">Delete All<i class="fa fa-trash" aria-hidden="true" style="margin-left: 5px"></i></a></span></div>
 
                 <?php
                 include "dbconnect.php";
@@ -40,8 +43,12 @@ $thisdate = $_GET['thisdate'];
                     $result = $conn->query($sql);
                     while($row = $result->fetch_assoc()) {
                         ?>
-
-                        <div class="item-wrapper"><?php echo $row['text']; ?></div>
+                        <style>
+                            a:hover {
+                                text-decoration: none;
+                            }
+                        </style>
+                        <div class="item-wrapper"><a href="index.php?thisdate=<?php echo $row['date']; ?>" style="color: #373a3c;"><?php echo $row['text']; ?></a></div>
 
                     <?php } ?>
                 </div>
