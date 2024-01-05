@@ -1,7 +1,8 @@
 repo_name: ThisIsSimple/NevernotE
 report_id: 1fd564201c91369621d97358acfa5194
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-30T18:27:05+00:00'
+timestamp: '2024-01-05T08:29:42+00:00'
 requested_by: ThisIsSimple
 provider: github
 branch: master
@@ -15,6 +16,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/ThisIsSimple/NevernotE
   detection_source: Repo Metadata
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -25,6 +27,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/ThisIsSimple/NevernotE
   detection_source: Repo Metadata
 - name: Git
   description: Fast, scalable, distributed revision control system
@@ -34,6 +37,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/ThisIsSimple/NevernotE
   detection_source: Repo Metadata
 - name: HTML
   description: Hypertext Markup Language for creating web pages.
@@ -41,6 +45,7 @@ tools:
   open_source: false
   hosted_saas: false
   image_url: https://img.stackshare.io/service/2270/no-img-open-source.png
+  detection_source_url: https://github.com/ThisIsSimple/NevernotE/blob/master/content-list.html
   detection_source: content-list.html
   last_updated_by: dewberry9
   last_updated_on: 2016-12-09 10:43:06.000000000 Z
